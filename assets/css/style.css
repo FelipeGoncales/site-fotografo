@@ -30,9 +30,21 @@ nav {
     display: flex;
     gap: 50px;
     & a {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         color: var(--text-color);
+        transition: scale 0.2s;
+        &:hover {
+            scale: 1.1;
+        }
     }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
 }
 
 .div-logo {
@@ -41,7 +53,7 @@ nav {
     justify-content: center;
     gap: 7px;
     & h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 300;
         color: var(--text-color);
     }
@@ -49,4 +61,96 @@ nav {
 
 .logo {
     width: 28px;
+}
+
+.sec-banner {
+    position: relative;
+    display: flex;
+    height: 850px;
+    width: 100%;
+    overflow: hidden;
+    & h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        font-size: 1.6rem;
+        font-weight: 100;
+        color: white;
+        z-index: 2;
+    }
+}
+
+.over-display {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec-sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 25vw;
+    justify-content: center;
+    & p {
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+.sec-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.galeria-item {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 25%;
+    overflow: hidden;
+    transition: scale 0.3s;
+    padding-bottom: 30px;
+    &:hover {
+        z-index: 2;
+        scale: 1.05;
+    }
+}
+
+.galeria-img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.galeria-texto {
+    font-size: 1.2rem;
+
+}
+
+.galeria-categoria {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.galeria-local {
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 0.7rem;
 }
