@@ -14,10 +14,10 @@
             <img src="assets/img/logo.svg" alt="" class="logo">
             <h1>SereneView</h1>
         </div>
-        <nav>
-            <a href="">Sobre Mim</a>
-            <a href="">Portfólio</a>
-            <a href="">Contato</a>
+        <nav id="nav-menu">
+            <a href="#sec-sobre">Sobre Mim</a>
+            <a href="#sec-galeria">Portfólio</a>
+            <a href="#sec-contato">Contato</a>
         </nav>
     </header>
     <main>
@@ -27,25 +27,68 @@
             <img src="assets/img/banner.svg" alt="" class="banner">
         </section>
 
-        <section class="sec-sobre">
+        <section class="sec-sobre" id="sec-sobre">
             <img src="assets/img/logo.svg" alt="" class="logo">
             <p>
-                Sou Lucas Mendes, fotógrafo especializado em capturar momentos únicos e autênticos. 
-                Meu objetivo é transformar suas histórias em imagens inesquecíveis, com criatividade 
-                e atenção aos detalhes. Cada foto é uma oportunidade de eternizar emoções e criar 
-                memórias que durarão para sempre. Vamos transformar seu momento em arte!
+                Sou Lucas Mendes, um fotógrafo apaixonado por capturar a beleza das pessoas em harmonia 
+                com a natureza. Com anos de experiência, desenvolvi um estilo único que combina a essência 
+                humana com paisagens deslumbrantes.<br><br> Meu objetivo é transformar suas histórias em imagens 
+                inesquecíveis, realçando a luz natural e as cores vibrantes que cercam cada momento.
+                Acredito fielmente que cada foto é uma oportunidade de celebrar emoções e criar memórias que cultivam 
+                a conexão entre o ser humano e o ambiente.<br><br> Vamos juntos eternirzar seus momentos, 
+                onde a natureza é o quadro perfeito para essa obra de arte!
             </p>
         </section>
 
-        <section class="sec-galeria"></section>
+        <section class="sec-galeria" id="sec-galeria"></section>
 
-        <section>
-
+        <section class="sec-form" id="sec-contato">
+            <img src="assets/img/fotografia2.jpeg" alt="" class="">
+            <form>
+                <h2>Dúvidas? Entre em contato!</h2>
+                <input type="text" placeholder="Seu nome" id='input-nome' required>
+                <input type="email" placeholder="Seu melhor e-mail" id='input-email' required>
+                <textarea name="" rows="8" placeholder="Escreva sua mensagem" id='input-textarea' required></textarea>
+                <p id="text-formulario-enviado"></p>
+                <button type="submit" id="button-submit">Enviar</button>
+            </form>
         </section>
     </main>
     <footer>
+        <h3>Outras informações de contato</h3>
 
+        <div class="div-pai-contato">
+            <div class="div-contato">
+                <div class="div-contatinho">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>lucasmendesfotografo@gmail.com</p>
+                </div>
+                <div class="div-contatinho">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>(18) 99999-9999</p>
+                </div>
+            </div>
+            <div class="div-contato">
+                <div class="div-contatinho">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>@lucasMendes.fotografo</p>
+                </div>
+                <div class="div-contatinho">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>lucasMendesFotografo</p>
+                </div>
+                <div class="div-contatinho">
+                    <i class="fa-brands fa-pinterest"></i>
+                    <p>lucasmendesfotografo</p>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <div id="div-overlay">
+        <img src="assets/img/fotografia1.jpeg" alt="">
+        <i class="fa-solid fa-x" onclick="fecharImagem()"></i>
+    </div>
 
     <script src="dados.js"></script>
     <script src="script.js"></script>

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const img = document.createElement('img');
         img.classList.add('galeria-img')
         img.src = dado.img;
+        img.addEventListener('click', abrirImagem);
 
         const texto = document.createElement('p');
         texto.classList.add('galeria-descricao');
@@ -30,4 +31,86 @@ document.addEventListener('DOMContentLoaded', function() {
 
         secGaleria.appendChild(div);
     }
+
+    const links = document.querySelectorAll('#nav-menu a');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const elementPosition = (targetElement.getBoundingClientRect().top + window.scrollY) - 45;
+            
+            if (link === links[1]) {
+                if (targetElement) {
+                    window.scrollTo({
+                        top: elementPosition - 38
+                    });
+                }
+            } else {
+                if (targetElement) {
+                    const offset = window.innerHeight / 2 - targetElement.offsetHeight / 2;
+    
+                    window.scrollTo({
+                        top: elementPosition - offset
+                    });
+                }
+            }
+        });
+    });
+
+
+    const submitButton = document.getElementById('button-submit'); 
+    const form = document.querySelector('form');
+    const text = document.getElementById('text-formulario-enviado');
+    const inputNome = document.getElementById('input-nome');
+    const inputEmail = document.getElementById('input-email');
+    const inputText = document.getElementById('input-textarea');
+
+    submitButton.addEventListener('click', function(event) {
+        if (inputNome.checkValidity() && inputEmail.checkValidity() && inputText.checkValidity()) {
+            text.textContent = 'Formulário enviado com sucesso!';
+
+            inputNome.value = '';
+            inputEmail.value = '';
+            inputText.value = '';
+
+            event.preventDefault();
+        } else {
+            text.textContent = 'Informações inválidas';
+        }
+    })
+
 })
+
+function abrirImagem() {
+    const divOverlay = document.getElementById('div-overlay');
+    const img = divOverlay.querySelector('img');
+
+    const divDisplay = window.getComputedStyle(divOverlay).getPropertyValue('display');
+
+    if (divDisplay === 'none') {
+        divOverlay.style.display = 'flex';
+        img.src = this.src;
+    }
+}
+
+function fecharImagem() {
+    const divOverlay = document.getElementById('div-overlay');
+
+    divOverlay.style.display = 'none';
+}
+
+function abrirFecharImagem() {
+    const divOverlay = document.getElementById('div-overlay');
+    const img = divOverlay.querySelector('img'); // Corrigido: acessa a imagem corretamente
+
+    if (divOverlay.style.display === 'none' || divOverlay.style.display === '') {
+        divOverlay.style.display = 'flex';
+        img.src = this.src; // 'this' deve se referir à imagem que foi clicada
+    } else {
+        divOverlay.style.display = 'none';
+        img.src = ''; // Limpa o src da imagem ao fechar
+    }
+}
