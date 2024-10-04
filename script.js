@@ -102,8 +102,8 @@ function abrirImagem() {
 
 function imagemDireita() {
     let imgSrc;
-    if (window.location.href === 'http://127.0.0.1:5500') {
-        imgSrc = img.src.substring((window.location.href+'/index.html'.length) + ('/index.html'.length));
+    if (window.location.href === 'http://127.0.0.1:5500/index.html') {
+        imgSrc = img.src.substring((window.location.href.length-10));
     } else {
         imgSrc = img.src.substring(window.location.href.length);
     }
@@ -112,7 +112,7 @@ function imagemDireita() {
         indice = parseInt(indice);
         if (indice < imagens.length-1) {
             if (imagens[indice] === imgSrc) {
-                img.src = window.location.href+imagens[indice+1];
+                img.src = imagens[indice+1];
             }
         }
     }
@@ -120,8 +120,8 @@ function imagemDireita() {
 
 function imagemEsquerda() {
     let imgSrc;
-    if (window.location.href === 'http://127.0.0.1:5500') {
-        imgSrc = img.src.substring((window.location.href+'/index.html'.length) + ('/index.html'.length));
+    if (window.location.href === 'http://127.0.0.1:5500/index.html') {
+        imgSrc = img.src.substring((window.location.href.length-10));
     } else {
         imgSrc = img.src.substring(window.location.href.length);
     }
@@ -130,7 +130,7 @@ function imagemEsquerda() {
         indice = parseInt(indice)
         if (indice > 0) {
             if (imagens[indice] === imgSrc) {
-                img.src = window.location.href+imagens[indice-1]
+                img.src = imagens[indice-1]
             }
         }
     }

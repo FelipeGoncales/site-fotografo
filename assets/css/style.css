@@ -449,7 +449,7 @@ footer {
             justify-content: center;
             gap: 80px;
             position: absolute;
-            bottom: 190px;
+            bottom: 90px;
         }
     }
     #text-formulario-enviado {
@@ -464,10 +464,10 @@ footer {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     #div-overlay {
         & .div-setas {
-            bottom: 220px;
+            bottom: 110px;
         }
     }
 }
@@ -491,7 +491,7 @@ footer {
 
     #div-overlay {
         & .div-setas {
-            bottom: 240px;
+            bottom: 140px;
         }
     }
 }
