@@ -413,11 +413,16 @@ footer {
     .galeria-descricao {
         min-height: 0;
     }
-    .sec-form img {
-        display: none;
-    }
     .sec-form {
         padding: 100px 0;
+        & img {
+            display: none;
+        }
+        & form {
+            & button:hover{
+                scale: 1;
+            }
+        }
     }
     .div-pai-contato {
         flex-direction: column;
