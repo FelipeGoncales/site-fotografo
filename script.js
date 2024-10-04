@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
             text.textContent = 'Informações inválidas';
         }
     })  
-    
 })
 
 const divOverlay = document.getElementById('div-overlay');
@@ -112,6 +111,8 @@ function imagemDireita() {
             }
         }
     }
+
+    console.log('seta direita')
 }
 
 function imagemEsquerda() {
@@ -125,6 +126,8 @@ function imagemEsquerda() {
             }
         }
     }
+    
+    console.log('seta esquerda')
 }
 
 function fecharImagem() {
