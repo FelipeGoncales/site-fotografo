@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             event.preventDefault();
         } else {
-            text.textContent = 'Informações inválidas';
+            text.textContent = 'Informações inválidas.';
         }
     })  
 })
