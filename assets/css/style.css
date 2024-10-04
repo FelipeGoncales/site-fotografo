@@ -8,6 +8,11 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+i {
+    outline: none;
 }
 
 :root {
@@ -299,7 +304,7 @@ footer {
     }
 }
 
-.fa-x {
+.fa-xmark {
     position: absolute;
     top: 20px;
     right: 40px;
@@ -353,7 +358,7 @@ footer {
             }
         }
     }
-    .fa-x {
+    .fa-xmark {
         right: 25px;
     }
 }
@@ -372,7 +377,7 @@ footer {
         justify-content: center;
         align-items: center;
         & a {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
     }
     .sec-banner h2 {
@@ -382,7 +387,7 @@ footer {
         padding: 70px 0;
         & p, span {
             width: 80vw;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
         }
     } 
     .galeria-item {
@@ -415,6 +420,10 @@ footer {
             bottom: 70px;
         }
     }
+    #text-formulario-enviado {
+        font-size: 0.85rem;
+        bottom: 6px;
+    }
     footer {
         & h3 {
             width: 230px;
@@ -425,6 +434,7 @@ footer {
 
 @media (max-width: 340px) {
     .sec-form {
+        padding: 50px 0 90px 0;
         & h2 {
             font-size: 1.32rem;
         }
@@ -434,5 +444,9 @@ footer {
                 width: 280px;
             }
         }
+    }
+    
+    #text-formulario-enviado {
+        font-size: 0.8rem;
     }
 }
