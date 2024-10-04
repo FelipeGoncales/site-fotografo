@@ -19,6 +19,7 @@ i {
     --text-color: #000000;
     --bg-color: #FFFFFF;
     --cor-destaque: #28b4bc;
+    --cinza-escuro: #141414;
 }
 
 body {
@@ -190,12 +191,16 @@ main {
 }
 
 .sec-form {
+    background-color: var(--cinza-escuro);
+    width: 100%;
     padding: 70px;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 50px;
     & h2 {
         font-size: 1.4rem;
+        color: var(--bg-color);
     }
     & img {
         width: 500px;
@@ -222,7 +227,7 @@ main {
             cursor: pointer;
             font-size: 1rem;
             font-weight: bold;
-            color: var(--bg-color);
+            color: var(--cinza-escuro);
             background-color: var(--cor-destaque);
             border-radius: 40px;
             padding: 5px 15px;
@@ -237,14 +242,14 @@ main {
 
 footer {
     padding: 50px;
-    background-color: var(--text-color);
+    background-color: var(--cor-destaque);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
     & h3 {
-        color: var(--cor-destaque);
+        color: var(--cinza-escuro);
         font-size: 1.4rem;
         text-align: left;
     }
@@ -276,6 +281,7 @@ footer {
 }
 
 #text-formulario-enviado {
+    color: var(--bg-color);
     position: absolute;
     font-size: 0.9rem;
     bottom: 5px;
@@ -414,13 +420,19 @@ footer {
         min-height: 0;
     }
     .sec-form {
-        padding: 100px 0;
+        padding: 75px 0;
         & img {
             display: none;
         }
         & form {
+            width: 330px;
+            padding: 120px 0;
+            gap: 30px;
             & button:hover{
                 scale: 1;
+            }
+            & input, textarea {
+                width: 100%;
             }
         }
     }
@@ -445,7 +457,7 @@ footer {
     }
     #text-formulario-enviado {
         font-size: 0.85rem;
-        bottom: 6px;
+        bottom: 127px;
     }
     footer {
         & h3 {
@@ -465,7 +477,6 @@ footer {
 
 @media (max-width: 340px) {
     .sec-form {
-        padding: 50px 0 90px 0;
         & h2 {
             font-size: 1.32rem;
         }
