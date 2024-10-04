@@ -101,7 +101,12 @@ function abrirImagem() {
 }
 
 function imagemDireita() {
-    const imgSrc = img.src.substring(window.location.href.length);
+    let imgSrc;
+    if (window.location.href === 'http://127.0.0.1:5500') {
+        imgSrc = img.src.substring((window.location.href+'/index.html'.length) + ('/index.html'.length));
+    } else {
+        imgSrc = img.src.substring(window.location.href.length);
+    }
     
     for (let indice in imagens) {
         indice = parseInt(indice);
@@ -114,7 +119,12 @@ function imagemDireita() {
 }
 
 function imagemEsquerda() {
-    const imgSrc = img.src.substring(window.location.href.length);
+    let imgSrc;
+    if (window.location.href === 'http://127.0.0.1:5500') {
+        imgSrc = img.src.substring((window.location.href+'/index.html'.length) + ('/index.html'.length));
+    } else {
+        imgSrc = img.src.substring(window.location.href.length);
+    }
 
     for (let indice in imagens) {
         indice = parseInt(indice)

@@ -289,7 +289,7 @@ footer {
     align-items: center;
     & i {
         cursor: pointer;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         color: white;
     }
     & img {
@@ -410,14 +410,17 @@ footer {
     }
     #div-overlay {
         & img {
-            width: 95%;
+            width: 90%;
             height: auto;
+        }
+        i {
+            font-size: 1.6rem;
         }
         & div {
             justify-content: center;
             gap: 80px;
             position: absolute;
-            bottom: 70px;
+            bottom: 190px;
         }
     }
     #text-formulario-enviado {
@@ -428,6 +431,14 @@ footer {
         & h3 {
             width: 230px;
             font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    #div-overlay {
+        & div {
+            bottom: 220px;
         }
     }
 }
@@ -448,5 +459,11 @@ footer {
     
     #text-formulario-enviado {
         font-size: 0.8rem;
+    }
+
+    #div-overlay {
+        & div {
+            bottom: 240px;
+        }
     }
 }
