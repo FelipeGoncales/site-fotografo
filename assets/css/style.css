@@ -13,6 +13,7 @@
 :root {
     --text-color: #000000;
     --bg-color: #FFFFFF;
+    --cor-destaque: #28b4bc;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 
 header {
     position: fixed;
-    z-index: 4;
+    z-index: 10;
     width: 100%;
     background-color: var(--bg-color);
     display: flex;
@@ -37,9 +38,9 @@ nav {
     & a {
         font-size: 0.9rem;
         color: var(--text-color);
-        transition: scale 0.2s;
+        transition: 0.1s;
         &:hover {
-            scale: 1.1;
+            color: var(--cor-destaque);
         }
     }
 }
@@ -115,13 +116,20 @@ main {
         font-size: 0.9rem;
         text-align: center;
     }
+    & span{       
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--cor-destaque);
+    }
 }
 
 .sec-galeria {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     position: relative;
 }
+
 
 .galeria-item {
     cursor: pointer;
@@ -130,7 +138,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     width: 25%;
     overflow: hidden;
     transition: scale 0.3s;
@@ -146,25 +154,26 @@ main {
     overflow: hidden;
 }
 
-.galeria-texto {
-    font-size: 1.2rem;
-
+.galeria-descricao {
+    font-size: 1.1rem;
 }
 
 .galeria-categoria {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--cor-destaque);
 }
 
 .galeria-local {
-    font-weight: 200;
+    font-weight: 300;
     text-transform: uppercase;
     font-size: 0.7rem;
 }
 
 .sec-form {
-    padding: 70px 0;
+    padding: 70px;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -184,9 +193,9 @@ main {
         & input, textarea {
             font-size: 0.8rem;
             padding: 3px 5px;
-            width: 400px;
-            border: 1px solid rgba(0,0,0,0.6);
-            border-radius: 3px;
+            width: 380px;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 6px;
             outline: none;
             resize: none;
         }
@@ -197,7 +206,7 @@ main {
             font-size: 1rem;
             font-weight: bold;
             color: var(--bg-color);
-            background-color: var(--text-color);
+            background-color: var(--cor-destaque);
             border-radius: 40px;
             padding: 5px 15px;
             letter-spacing: 1px;
@@ -257,7 +266,7 @@ footer {
 #div-overlay {
     display: none;
     position: absolute;
-    z-index: 15;
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
@@ -268,14 +277,23 @@ footer {
     align-items: center;
     & i {
         cursor: pointer;
-        position: absolute;
         font-size: 1.6rem;
-        top: 20px;
-        right: 40px;
         color: white;
     }
     & img {
         width: auto;
         height: 90%;
     }
+    & div {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+    }
+}
+
+.fa-x {
+    position: absolute;
+    top: 20px;
+    right: 40px;
 }
