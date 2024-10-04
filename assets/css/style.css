@@ -193,7 +193,7 @@ main {
 .sec-form {
     background-color: var(--cinza-escuro);
     width: 100%;
-    padding: 70px;
+    padding: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,7 +249,7 @@ footer {
     justify-content: center;
     gap: 30px;
     & h3 {
-        color: var(--cinza-escuro);
+        color: var(--bg-color);
         font-size: 1.4rem;
         text-align: left;
     }
@@ -271,11 +271,11 @@ footer {
     display: flex;
     gap: 7px;
     & p {
-        color: var(--bg-color);
+        color: var(--cinza-escuro);
         font-size: 0.8rem;
     }
     & i {
-        color: var(--bg-color);
+        color: var(--cinza-escuro);
         font-size: 1rem;
     }
 }
@@ -420,13 +420,11 @@ footer {
         min-height: 0;
     }
     .sec-form {
-        padding: 75px 0;
         & img {
             display: none;
         }
         & form {
             width: 330px;
-            padding: 120px 0;
             gap: 30px;
             & button:hover{
                 scale: 1;
