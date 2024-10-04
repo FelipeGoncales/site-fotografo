@@ -296,7 +296,7 @@ footer {
         width: auto;
         height: 90%;
     }
-    & div {
+    & .div-setas {
         width: 95%;
         display: flex;
         justify-content: space-between;
@@ -416,7 +416,7 @@ footer {
         i {
             font-size: 1.6rem;
         }
-        & div {
+        & .div-setas {
             justify-content: center;
             gap: 80px;
             position: absolute;
@@ -437,7 +437,7 @@ footer {
 
 @media (max-width: 375px) {
     #div-overlay {
-        & div {
+        & .div-setas {
             bottom: 220px;
         }
     }
@@ -462,7 +462,7 @@ footer {
     }
 
     #div-overlay {
-        & div {
+        & .div-setas {
             bottom: 240px;
         }
     }
