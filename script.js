@@ -101,33 +101,29 @@ function abrirImagem() {
 }
 
 function imagemDireita() {
-    const imgSrc = img.src.substring('http://127.0.0.1:5500/'.length);
+    const imgSrc = img.src.substring(window.location.href.length);
     
     for (let indice in imagens) {
         indice = parseInt(indice);
         if (indice < imagens.length-1) {
             if (imagens[indice] === imgSrc) {
-                img.src = 'http://127.0.0.1:5500/'+imagens[indice+1];
+                img.src = window.location.href+imagens[indice+1];
             }
         }
     }
-
-    console.log('seta direita')
 }
 
 function imagemEsquerda() {
-    const imgSrc = img.src.substring('http://127.0.0.1:5500/'.length);
+    const imgSrc = img.src.substring(window.location.href.length);
 
     for (let indice in imagens) {
         indice = parseInt(indice)
         if (indice > 0) {
             if (imagens[indice] === imgSrc) {
-                img.src = 'http://127.0.0.1:5500/'+imagens[indice-1]
+                img.src = window.location.href+imagens[indice-1]
             }
         }
     }
-    
-    console.log('seta esquerda')
 }
 
 function fecharImagem() {
